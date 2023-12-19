@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "LOL G1",
+    'name': "LOL",
 
     'summary': """
         This application consists in a virtual ong""",
