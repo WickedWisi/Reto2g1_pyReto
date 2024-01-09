@@ -3,7 +3,7 @@ from odoo import models
 
 
 class Evento(models.Model):
-    _name = "grupoG1.evento"
+    _name = "grupog1.evento"
 
     id_evento = fields.Integer(required=True, string="id_sede")
     nombre = fields.Char(required=True, string="Nombre")

@@ -4,7 +4,7 @@ from odoo import models
 
 
 class Patrocinador(models.Model):
-    _name = "grupoG1.Patrocinador"
+    _name = "grupog1.Patrocinador"
 
     id_patrocinador = fields.Integer(required=True, string="id_patrocinador")
     nombre = fields.Char(required=True, string="nombre")
