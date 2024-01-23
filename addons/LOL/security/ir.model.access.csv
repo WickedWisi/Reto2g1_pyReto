@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_evento_socio,Acesso a eventos,model_grupog1_evento,inventario_group_socio,1,1,1,1
+access_evento_voluntario,Acesso a eventos,model_grupog1_evento,inventario_group_voluntario,1,,,,
+access_patrocinador_socio,Acesso a patrocinadores,model_grupog1_patrocinador,inventario_group_socio,1,1,1,1
+access_sede_socio,Acesso a sedes,model_grupog1_sede,inventario_group_socio,1,1,1,1
+access_sede_voluntario,Acesso a sedes,model_grupog1_sede,inventario_group_voluntario,1,,,,

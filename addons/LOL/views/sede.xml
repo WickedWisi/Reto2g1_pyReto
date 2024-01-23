@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+        <!-- Contenido de sede.xml, dentro de <data> -->
+        <record model="ir.ui.view" id="LOL.sede_list">
+            <field name="name">Lista de Sedes LOL</field>
+            <field name="model">grupog1.sede</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id_sede"/>
+                    <field name="finContrato"/>
+                    <field name="pais"/>
+                    <field name="numVoluntariosMax"/>
+                    <field name="aforoMax"/>
+                    <field name="ubicacion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.sede_kanban">
+            <field name="name">Kanban de Sedes LOL</field>
+            <field name="model">grupog1.sede</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <span class="oe_kanban_title">ID:
+                                        <field name="id_sede"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Fin Contrato:
+                                        <field name="finContrato"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">País:
+                                        <field name="pais"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Voluntarios Máximos:
+                                        <field name="numVoluntariosMax"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Aforo Máximo:
+                                        <field name="aforoMax"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Ubicación:
+                                        <field name="ubicacion"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                    <field name="id_sede"/>
+                    <field name="finContrato"/>
+                    <field name="pais"/>
+                    <field name="numVoluntariosMax"/>
+                    <field name="aforoMax"/>
+                    <field name="ubicacion"/>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.sede_form">
+            <field name="name">Formulario de Sede LOL</field>
+            <field name="model">grupog1.sede</field>
+            <field name="arch" type="xml">
+                <form string="Sede Form">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <field name="id_sede"/>
+                            <field name="finContrato"/>
+                            <field name="pais"/>
+                            <field name="numVoluntariosMax"/>
+                            <field name="aforoMax"/>
+                            <field name="ubicacion"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="LOL.sede_search">
+            <field name="name">Búsqueda de Sedes LOL</field>
+            <field name="model">grupog1.sede</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="id_sede"/>
+                    <field name="finContrato"/>
+                    <field name="pais"/>
+                    <field name="numVoluntariosMax"/>
+                    <field name="aforoMax"/>
+                    <field name="ubicacion"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

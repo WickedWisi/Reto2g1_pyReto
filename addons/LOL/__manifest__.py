@@ -3,7 +3,7 @@
     'name': "LOL",
 
     'summary': """
-        This application consists in a virtual ong""",
+        This application consists of a virtual NGO""",
 
     'description': """
         This app provides functionality for creating, 
@@ -14,23 +14,22 @@
 
     'author': "DAM Tartanga Grupo1",
     'website': "http://www.tartanga.eus",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/module/module_data.xml
-    # for the full list
+    'icon': "/LOL/static/description/icono.png",
     'category': 'Uncategorized',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
     'depends': ['base'],
 
-    # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/libreria_security.xml',
+        'security/ir.model.access.csv',
+        'views/view.xml',
+        'views/patrocinador.xml',
+        'views/sede.xml',
+        'views/evento.xml',
+        #'views/templates.xml',
     ],
-    # only loaded in demonstration mode
+    # Solo cargar en modo demostración si es necesario
     'demo': [
         'demo/demo.xml',
     ],

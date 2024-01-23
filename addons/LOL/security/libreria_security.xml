@@ -1,0 +1,15 @@
+<odoo>
+    <record id="categoria_modulo_ong" model="ir.module.category">
+        <field name="name">Acceso a la ONG</field>
+    </record>
+    <record id="inventario_group_socio" model="res.groups">
+        <field name="name">socio</field>
+        <field name="category_id" ref="categoria_modulo_ong"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="inventario_group_voluntario" model="res.groups">
+        <field name="name">voluntario</field>
+        <field name="category_id" ref="categoria_modulo_ong"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+</odoo>

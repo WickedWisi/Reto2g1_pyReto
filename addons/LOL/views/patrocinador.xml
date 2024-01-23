@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <!-- Contenido de patrocinador.xml, dentro de <data> -->
+        <record model="ir.ui.view" id="LOL.patrocinador_list">
+            <field name="name">Lista de Patrocinadores LOL</field>
+            <field name="model">grupog1.patrocinador</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id_patrocinador"/>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                    <field name="duracion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.patrocinador_form">
+            <field name="name">Formulario de Patrocinador LOL</field>
+            <field name="model">grupog1.patrocinador</field>
+            <field name="arch" type="xml">
+                <form string="Patrocinador Form">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <field name="id_patrocinador"/>
+                            <field name="nombre"/>
+                            <field name="descripcion"/>
+                            <field name="email"/>
+                            <field name="telefono"/>
+                            <field name="duracion"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.patrocinador_kanban">
+            <field name="name">Kanban de Patrocinadores LOL</field>
+            <field name="model">grupog1.patrocinador</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <span class="oe_kanban_title">ID:
+                                        <field name="id_patrocinador"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Nombre:
+                                        <field name="nombre"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Descripción:
+                                        <field name="descripcion"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Email:
+                                        <field name="email"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Teléfono:
+                                        <field name="telefono"/>
+                                    </span>
+                                    <span class="oe_kanban_subtitle">Duración:
+                                        <field name="duracion"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                    <field name="id_patrocinador"/>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                    <field name="duracion"/>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.patrocinador_search">
+            <field name="name">Búsqueda de Patrocinadores LOL</field>
+            <field name="model">grupog1.patrocinador</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="id_patrocinador"/>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                    <field name="duracion"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

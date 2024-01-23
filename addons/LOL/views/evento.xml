@@ -1,0 +1,90 @@
+<odoo>
+    <data>
+        <!-- Contenido de evento.xml, dentro de <data> -->
+        <record model="ir.ui.view" id="LOL.evento_list">
+            <field name="name">Lista de Eventos LOL</field>
+            <field name="model">grupog1.evento</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id_evento"/>
+                    <field name="nombre"/>
+                    <field name="fechaEvento"/>
+                    <field name="descripcion"/>
+                    <field name="Aforo"/>
+                    <field name="evento_patrocinador_id"/>
+                    <field name="evento_sede_id"/>
+                    <field name="evento_socio_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.evento_form">
+            <field name="name">Formulario de Evento LOL</field>
+            <field name="model">grupog1.evento</field>
+            <field name="arch" type="xml">
+                <form string="Evento Form">
+                    <group colspan="4">
+                        <group colspan="2" col="2">
+                            <field name="id_evento"/>
+                            <field name="nombre"/>
+                            <field name="fechaEvento"/>
+                            <field name="descripcion"/>
+                            <field name="Aforo"/>
+                            <field name="evento_patrocinador_id"/>
+                            <field name="evento_sede_id"/>
+                            <field name="evento_socio_id"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+       <record model="ir.ui.view" id="LOL.evento_kanban">
+            <field name="name">Kanban de Eventos LOL</field>
+            <field name="model">grupog1.evento</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <span class="oe_kanban_title">ID: <field name="id_evento"/></span>
+                                    <span class="oe_kanban_subtitle">Nombre: <field name="nombre"/></span>
+                                    <span class="oe_kanban_subtitle">Fecha: <field name="fechaEvento"/></span>
+                                    <span class="oe_kanban_subtitle">Aforo: <field name="Aforo"/></span>
+                                    <span class="oe_kanban_subtitle">Patrocinador: <field name="evento_patrocinador_id"/></span>
+                                    <span class="oe_kanban_subtitle">Sede: <field name="evento_sede_id"/></span>
+                                    <span class="oe_kanban_subtitle">Socio: <field name="evento_socio_id"/></span>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                    <field name="id_evento"/>
+                    <field name="nombre"/>
+                    <field name="fechaEvento"/>
+                    <field name="Aforo"/>
+                    <field name="evento_patrocinador_id"/>
+                    <field name="evento_sede_id"/>
+                    <field name="evento_socio_id"/>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="LOL.evento_search">
+            <field name="name">Búsqueda de Eventos LOL</field>
+            <field name="model">grupog1.evento</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="id_evento"/>
+                    <field name="nombre"/>
+                    <field name="fechaEvento"/>
+                    <field name="descripcion"/>
+                    <field name="Aforo"/>
+                    <field name="evento_patrocinador_id"/>
+                    <field name="evento_sede_id"/>
+                    <field name="evento_socio_id"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

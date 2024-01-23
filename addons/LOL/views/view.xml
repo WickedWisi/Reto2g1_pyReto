@@ -1,0 +1,37 @@
+<odoo>
+  <data>
+    <!-- Top-level menu item -->
+    <menuitem name="LOL" id="LOL.menu_root" />
+
+
+    <record model="ir.actions.act_window" id="accionar_evento">
+      <field name="name">LOL EVENTO</field>
+      <field name="res_model">grupog1.evento</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem name="Evento" id="LOL.menu_1" parent="LOL.menu_root" action="accionar_evento"/>
+
+    <!-- Submenu items -->
+    <record model="ir.actions.act_window" id="accionar_patrocinador">
+      <field name="name">LOL PATROCINADOR</field>
+      <field name="res_model">grupog1.patrocinador</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem name="Patrocinador" id="LOL.menu_2" parent="LOL.menu_root" action="accionar_patrocinador"/>
+
+
+
+   <!-- Submenu items -->
+    <record model="ir.actions.act_window" id="accionar_sede">
+      <field name="name">LOL SEDE</field>
+      <field name="res_model">grupog1.sede</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem name="Sede" id="LOL.menu_3" parent="LOL.menu_root" action="accionar_sede"/>
+
+
+  </data>
+</odoo>
